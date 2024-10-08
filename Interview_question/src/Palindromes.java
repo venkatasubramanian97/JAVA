@@ -1,4 +1,3 @@
-package zoho;
 import java.util.Scanner;
 
 public class Palindromes {

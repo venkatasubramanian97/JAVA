@@ -16,11 +16,11 @@ public class ArraysAscendingDescending {
 		Arrays.sort(array, Collections.reverseOrder());
 
 		System.out.println("Array in descending order: " + Arrays.toString(array));
-		
+
 		Arrays.sort(array);
 
 		System.out.println("Array in ascending order: " + Arrays.toString(array));
-		
+
 		Arrays.sort(array, Comparator.reverseOrder());
 
 		System.out.println("Array in descending order: " + Arrays.toString(array));

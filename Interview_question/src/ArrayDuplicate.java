@@ -1,5 +1,6 @@
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedHashSet;
+//import java.util.LinkedHashSet;
 
 public class ArrayDuplicate {
 
@@ -14,18 +15,30 @@ public class ArrayDuplicate {
 	}
 
 	public static int[] removeDuplicates(int[] array) {
-		LinkedHashSet<Integer> set = new LinkedHashSet<>();
-
-		for (int num : array) {
-			set.add(num);
+//		LinkedHashSet<Integer> set = new LinkedHashSet<>();
+//
+//		for (int num : array) {
+//			set.add(num);
+//		}
+//
+//		int[] result = new int[set.size()];
+//		int index = 0;
+//		for (int num : set) {
+//			result[index++] = num;
+//		}
+//
+//		return result;
+		ArrayList<Integer> set = new ArrayList<>();
+		for (int i = 0; i < array.length; i++) {
+			if (!set.contains(array[i])) {
+				set.add(array[i]);
+			}
 		}
-
-		int[] result = new int[set.size()];
 		int index = 0;
+		int result[] = new int[set.size()];
 		for (int num : set) {
 			result[index++] = num;
 		}
-
 		return result;
 	}
 }

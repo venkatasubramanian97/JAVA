@@ -7,20 +7,20 @@ public class CharacterString {
 
 		for (int i = 0; i < charCount.length; i++) {
 			if (charCount[i] > 0) {
-				System.out.println((char) i + ": " + charCount[i]);
+				System.out.println((char) (i+97) + ": " + charCount[i]);
 			}
 		}
 	}
 
 	public static int[] countCharacters(String string) {
-		int[] charCount = new int[256]; // Assuming ASCII characters
+		int[] charCount = new int[26]; // Assuming ASCII characters
 
 //		for (int i = 0; i < string.length(); i++) {
 //			char ch = string.charAt(i);
 //			charCount[ch]++;
 //		}
 		for (char ch : string.toCharArray()) {
-			charCount[ch]++;
+			charCount[ch-97]++;
 		}
 		return charCount;
 	}

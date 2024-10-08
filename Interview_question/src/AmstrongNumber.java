@@ -9,7 +9,7 @@ public class AmstrongNumber {
 		int number = scanner.nextInt();
 		for (int i = 0; i < number; i++) {
 			if (isArmstrong(i)) {
-				System.out.println(i);
+				System.out.print(i + " ");
 			}
 		}
 		scanner.close();
@@ -36,8 +36,10 @@ public class AmstrongNumber {
 			num /= 10;
 			count++;
 		}
-
 		return count;
 	}
-
 }
+//
+//output:
+//	Enter a number: 1000
+//	0 1 2 3 4 5 6 7 8 9 153 370 371 407 
